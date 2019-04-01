@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="m-3" onload="startGame()">
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-md-4 my-2" id="box">
+      <div style="text-align:center;" class="my-1" id="game-controls">
+        <div class="card card-body mb-2">
+          <div class="row">
+          <div class="col-6 d-inline text-muted text-left">
+            <h6 class="card-subtitle mb-2">Coords:</h6>
+            <h6 class="card-subtitle"><span id="coordinates"></span></h6>
+          </div>
+          <div class="col-6 d-inline text-muted">
+            <h6 class="card-subtitle mb-2">Speed:</h6>
+            <h6 class="card-subtitle"><span id="speed"></span></h6>
+          </div>
+        </div>
+        </div>
+        <div class="p-3 rounded border bg-light">
+          <button class="btn btn-light shadow-sm mb-2" onclick="moveup()"><i class="fas fa-arrow-up"></i></button><br>
+          <button class="btn btn-light shadow-sm" onclick="moveleft()"><i class="fas fa-arrow-left"></i></button>
+          <button class="btn btn-light shadow-sm mx-1" onclick="movedown()"><i class="fas fa-arrow-down"></i></button>
+          <button class="btn btn-light shadow-sm" onclick="moveright()"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+
+  <div class="col-md-1 my-2 px-1 text-center">
+    <div class="p-3 rounded border w-75 bg-light">
+      <div class="custom-control custom-switch mb-2">
+        <input type="checkbox" class="custom-control-input" id="power-btn">
+        <label class="custom-control-label" for="power-btn">On</label>
+      </div>
+      <button class="btn btn-sm btn-light shadow-sm mx-1" onclick="fromHome()"><i class="fas fa-home"></i></button>
+    </div>
+  
+    <div class="p-3 rounded border w-50 mt-2 bg-light" id="edit-box">
+      <button class="btn btn-sm shadow-sm text-light color" value="#391463" style="background:#391463"><i class="fas fa-plus"></i></button><br>
+      <button class="btn btn-sm shadow-sm mt-2 color" value="#508484" style="background:#508484"><i class="fas fa-plus"></i></button><br>
+      <button class="btn btn-sm shadow-sm my-2 color" value="#A2D729" style="background:#A2D729"><i class="fas fa-plus"></i></button><br>
+      <button class="btn btn-sm shadow-sm color" style="background:#DB162F"  value="#DB162F"><i class="fas fa-plus"></i></button>
+    </div>
+  </div>
+
+
+</div>
+</div>
+
+
+<script src="main.js"></script>
+<script src="ux.js"></script>
+</body>
+</html>
